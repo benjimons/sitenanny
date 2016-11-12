@@ -8,7 +8,7 @@
 #
 
 __author__ = 'Ben McDowall'
-import os, sys, shutil, time, logging, getpass, getopt, sqlite3
+import os, sys, shutil, time, logging, getopt, sqlite3
 from urlparse import urlparse
 from email.mime.text import MIMEText
 from subprocess import Popen, PIPE
