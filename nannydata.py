@@ -13,8 +13,8 @@ from urlparse import urlparse
 from email.mime.text import MIMEText
 from subprocess import Popen, PIPE
 
-fromaddr = "nanny@honeynet.co.nz"
-toaddr = "ben.mcdowall@spark.co.nz"
+fromaddr = "sitenanny@example.com"
+toaddr = "alertinbox@example.com"
 
 logfile = "logger.log"
 
