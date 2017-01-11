@@ -30,7 +30,12 @@ logger.setLevel(logging.DEBUG)
 logger.debug("Script Started")
 
 def processfile(filename, sitename):
-#connect to DB - create one if it does not exist
+	#Create DB folder if it doesnt exist
+	if not os.path.exists('dbs/'):
+		logger.debug("Attempting to create folder called dbs")
+    		os.makedirs('dbs/')
+	
+	#connect to DB - create one if it does not exist
 	logger.debug("Opening database "+"dbs/"+sitename+".db")
 	conn = sqlite3.connect('dbs/'+sitename+'.db')
 	c = conn.cursor()
@@ -43,7 +48,7 @@ def processfile(filename, sitename):
 	msgstring = ""
 	counter = 0
 	newcounter = 0 
-	print(filename)
+	
 	#Cut file up and extract all domains
 	with open(filename) as f:
 
